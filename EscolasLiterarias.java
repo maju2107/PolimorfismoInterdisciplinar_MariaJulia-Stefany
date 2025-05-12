@@ -8,14 +8,14 @@ public abstract class EscolasLiterarias{
     }
 
     public void setPeriodo (String perido){
-        this.periodo = perido;
+        this.periodo = periodo;
     }
 
     public String getNome (){
         return nome;
     }
 
-    public String getPerido (){
+    public String getPeriodo (){
         return periodo;
     }
 
