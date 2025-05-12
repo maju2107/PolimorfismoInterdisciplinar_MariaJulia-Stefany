@@ -6,15 +6,19 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
         int opcao;
         do {
-<<<<<<< HEAD
-            System.out.println("\nOlá! Seja bem-vindo ao Sistema .\n");
-        } while();
-=======
-            System.out.println("\nOlá! Seja bem-vindo ao Sistema Interdisciplinar.\n");
+            System.out.println("Seja bem-vindo ao Sistema Interdisciplinar!");
+            System.out.println("Qual matéria você gostaria de estudar?");
+            System.out.println("1- Português");
+            System.out.println("2- Biologia");
+            System.out.println("3- História");
+            System.out.println("0- Sair");
 
-        } while (opcao =! );
->>>>>>> 1999be3d1057ceedf39625e5a1709fe788d4073d
+            System.out.println("Digite o número da opção desejada: ");
+            opcao = teclado.nextInt();
 
+            if (opcao == 1|| opcao == 2 || opcao == 3 & opcao != isNaN(opcao)){
+
+            }
     }
 }
 

@@ -10,8 +10,6 @@ public class Humanismo extends EscolasLiterarias {
         this.farsas = farsas;
     }
 
-
-
     @Override
     public String definicao() {
        return definicaoHumanismo;
