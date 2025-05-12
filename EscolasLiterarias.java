@@ -1,5 +1,5 @@
 public abstract class EscolasLiterarias{
-    
+
     private String nome;
     private String periodo;
 
@@ -20,6 +20,6 @@ public abstract class EscolasLiterarias{
     }
 
     public abstract String definicao();
-    public abstract String quiz();
+    public abstract void quiz();
 
 }
