@@ -6,8 +6,9 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
         int opcao;
         do {
-            System.out.println("\nOlá! Seja bem-vindo ao Sistema .\n");
-        } while ();
+            System.out.println("\nOlá! Seja bem-vindo ao Sistema Interdisciplinar.\n");
+
+        } while (opcao =! );
 
     }
 }
