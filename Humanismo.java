@@ -5,10 +5,6 @@ public class Humanismo extends EscolasLiterarias {
     private String autos;
     private String farsas;
 
-    public Humanismo(String autos, String farsas) {
-        this.autos = autos;
-        this.farsas = farsas;
-    }
 
     @Override
     public String definicao() {

@@ -1,25 +1,21 @@
-public abstract class EscolasLiterarias{
+public abstract class EscolasLiterarias extends Materia{
 
-    private String nome;
-    private String periodo;
+    private String ExemploDeObras;
 
-    public void setNome (String nome){
-        this.nome = nome;
+    public void setExemploDeObras (String ExemploDeObras){
+        this.ExemploDeObras = ExemploDeObras;
     }
 
-    public void setPeriodo (String perido){
-        this.periodo = periodo;
+    public String getExemploDeObras (){
+        return ExemploDeObras;
     }
 
-    public String getNome (){
-        return nome;
+    @Override
+    public String definicao(){
+        String r = "o";
+        return r;
     }
 
-    public String getPeriodo (){
-        return periodo;
-    }
-
-    public abstract String definicao();
     public abstract void quiz();
 
 }
