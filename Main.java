@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int opcao;
+        String escolhaEscolaLiteraria;
             do {
             MenuDeOpcoes();
 
@@ -15,24 +16,28 @@ public class Main {
                 case 1:
 
                  System.out.println("Digite o nome da Escola Literária você deseja estudar (Barroco, Humanismo ou Romantismo) : ");
-                 String escolhaEscolaLiteraria = teclado.nextLine().toLowerCase();
+                 escolhaEscolaLiteraria = teclado.nextLine().toLowerCase();
+                 teclado.nextLine();
 
-                 if (escolhaEscolaLiteraria == "barroco"){
-                    Materia portugues = new Barroco();
+                 if (escolhaEscolaLiteraria.equals("barroco")){
+
                     EscolasLiterarias barroco = new Barroco ();
                     barroco.setNome("Barroco");
 
                     System.out.println("Digite o nome de um exemplo de obra literária Barroca :");
                     barroco.setExemploDeObras(teclado.nextLine());
 
+                    System.out.println(barroco.getNome());
+                    System.out.println(mostrarDefinicaoDeEscolaLiteraria(barroco));
+
                  }
 
                  if ( escolhaEscolaLiteraria == "humanismo"){
-                    Materia portugues = new Humanismo ();
+                    EscolasLiterarias humanismo = new Humanismo ();
                  } 
 
                  if ( escolhaEscolaLiteraria == "romantismo"){
-                    Materia portugues = new Romantismo ();
+                    EscolasLiterarias romantismo = new Romantismo ();
                  } 
 
             
@@ -46,13 +51,16 @@ public class Main {
                 case 3:
                     
                 break;
+
+                case 0:
+                System.out.println("Voce saiuu..!");   
+                break;
             
                 default:
                  System.out.println("Opção não encontrada dentre as fornecidas pelo sistema!");   
                 break;
             }
 
-        
         } while(opcao!=0);
     }
 
@@ -65,8 +73,8 @@ public class Main {
         System.out.println("0- Sair");
     }
 
-    public static String mostrarDefinicaoDaMateria(Materia materia){
-        return materia.definicao();
+    public static String mostrarDefinicaoDeEscolaLiteraria(EscolasLiterarias escolasLiterarias){
+        return escolasLiterarias.definicao();
     }
 }
 

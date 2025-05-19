@@ -1,4 +1,14 @@
-public abstract class EscolasLiterarias extends Materia{
+public abstract class EscolasLiterarias {
+
+    private String nome;
+
+    public void setNome (String nome){
+        this.nome = nome;
+    }
+
+     public String getNome(){
+        return nome;
+    }
 
     private String ExemploDeObras;
 
@@ -10,11 +20,8 @@ public abstract class EscolasLiterarias extends Materia{
         return ExemploDeObras;
     }
 
-    @Override
-    public String definicao(){
-        String r = "o";
-        return r;
-    }
+    public abstract String definicao();
+
 
     public abstract void quiz();
 
