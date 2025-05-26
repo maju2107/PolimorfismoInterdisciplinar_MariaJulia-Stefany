@@ -1,6 +1,5 @@
 public abstract class Sistemas {
     private String nome;
-    private String tipo;
 
     public Sistemas() {
     }

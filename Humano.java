@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Humano extends Sistemas{
+public class Humano extends Sistemas {
     private String sistemaDigestorio;
     private String sistemaRespiratorio;
     private String sistemaCirculatorio;

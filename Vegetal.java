@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Vegetal extends Sistemas{
+public class Vegetal extends Sistemas {
     private String sistemaDermico;
     private String sistemaFundamental;
     private String sistemaVascular;
