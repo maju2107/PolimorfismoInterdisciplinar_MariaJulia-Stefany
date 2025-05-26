@@ -53,7 +53,7 @@ public class Main {
                 break;
 
                 case 0:
-                System.out.println("Voce saiuu..!");   
+                System.out.println("Você saiuu...!");   
                 break;
             
                 default:
