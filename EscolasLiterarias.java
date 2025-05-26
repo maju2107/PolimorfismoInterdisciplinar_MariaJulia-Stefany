@@ -10,14 +10,14 @@ public abstract class EscolasLiterarias {
         return nome;
     }
 
-    private String ExemploDeObras;
+    private String CaracteristicaPrincipal ;
 
-    public void setExemploDeObras (String ExemploDeObras){
-        this.ExemploDeObras = ExemploDeObras;
+    public void setCaracteristicaPrincipal (String CaracteristicaPrincipal ){
+        this.CaracteristicaPrincipal  = CaracteristicaPrincipal ;
     }
 
-    public String getExemploDeObras (){
-        return ExemploDeObras;
+    public String getCaracteristicaPrincipal  (){
+        return CaracteristicaPrincipal ;
     }
 
     public abstract String definicao();

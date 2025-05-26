@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 public class Humanismo extends EscolasLiterarias {
 
-    private String definicaoHumanismo = "O humanismo é um movimento intelectual e cultural que valoriza a dignidade e o potencial do ser humano, buscando uma compreensão mais ampla da experiência humana.";
-
+    private String definicaoHumanismo = "O Humanismo foi um movimento literário que marcou a transição entre a Idade Média e a Idade Moderna, ocorrendo entre os séculos XV e XVI.\n Ele se destacou por valorizar o ser humano, a razão e o conhecimento, rompendo com a visão teocêntrica medieval. Ademais, há o resgate da cultura greco-romana, com influência dos clássicos e o uso da prosa histórica e do teatro como formas de expressão.";
     private String autos;
     private String farsas;
 
@@ -57,7 +56,7 @@ public class Humanismo extends EscolasLiterarias {
                 }
             }
         }
-        System.out.println("\nOutros tipos de obras no Humanismo:");
+        System.out.println("\nAlguns tipos de obras no Humanismo:");
         System.out.println("- Auto: " + getAutos());
         System.out.println("- Farsa:  " + getFarsas());
     }
