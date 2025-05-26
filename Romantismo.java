@@ -6,7 +6,7 @@ public class Romantismo extends EscolasLiterarias {
     private String RomanceUrbano;
     private String RomanceRegionalista;
 
-    private String definicaoDoRomatismo = "O romantismo é um estilo de época marcado pelo sentimentalismo e pela idealização amorosa";
+    private String definicaoDoRomatismo = "O Romantismo foi um movimento literário que surgiu no final do século XVIII e se consolidou no século XIX, influenciado pela Revolução Francesa.\n Ele se caracteriza pela valorização das emoções, subjetividade, idealização do amor e da natureza, além da exaltação do nacionalismo.\n Possui 3 gerações românticas, a primeira maracada pelo nacionalismo, religiosidade e figura dos povos originários como heróis nacionais\n; a segunda marcada por pessimismo, gosto pelo mórbido, angústia e erotismo; e a terceira marcada por críticas socias e políticas, erotismo(sem culpa) e tom declamatório. ";
 
     // construtores
     public Romantismo() {
@@ -21,11 +21,11 @@ public class Romantismo extends EscolasLiterarias {
     }
 
     public String getRomanceUrbano() {
-        return RomanceIndianista;
+        return RomanceUrbano;
     }
 
     public String getRomanceRegionalista() {
-        return RomanceIndianista;
+        return RomanceRegionalista;
     }
 
     @Override
@@ -63,7 +63,7 @@ public class Romantismo extends EscolasLiterarias {
                 }
             }
         }
-        System.out.println("\nOutros tipos de romance do Romantismo Brasileiro:");
+        System.out.println("\nAlguns tipos de romance do Romantismo Brasileiro:");
         System.out.println("- " + getRomanceUrbano());
         System.out.println("- " + getRomanceRegionalista());
     }

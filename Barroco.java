@@ -5,7 +5,7 @@ public class Barroco extends EscolasLiterarias {
     private String sermoesPadreAntonioVieira ;
     private String sonetosGregorioDeMatos;
 
-    private String definicaoDoBarroco = "O barroco foi um movimento artístico caracterizado por uma estética rebuscada com requinte e excesso de adornos. ";
+    private String definicaoDoBarroco = "O Barroco foi um movimento literário que surgiu no final do século XVI, influenciado pelo contexto da Reforma Protestante e da Contrarreforma Católica.\n Ele se caracteriza pelo culto ao contraste, explorando oposições como religiosidade x sensualidade, espiritualidade x materialismo, e efemeridade x eternidade.\n Utiliza muitas as figuras de linguagem antítese e paradoxo, apresenta temas como fragilidade humana, fugacidade do tempo e crítica à vaidade além de forte influência religiosa e moralizante. ";
 
     //construtores
     public Barroco (){
@@ -57,7 +57,7 @@ public class Barroco extends EscolasLiterarias {
                 }
             }
         }
-        System.out.println("\nOutros tipos de obras no Barroco:");
+        System.out.println("\nAlguns tipos de obras no Barroco:");
         System.out.println("- Sermão: " + getSermoesPadreAntonioVieira());
         System.out.println("- Soneto:  " + getSonetosGregorioDeMatos());
     }
