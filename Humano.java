@@ -28,7 +28,7 @@ public class Humano extends Sistemas {
         this.sistemaMuscular = "Responsável pelos movimentos do corpo.";
         this.sistemaImunologico = "Defende o corpo contra doenças.";
         this.sistemaSensorial = "Permite que o corpo perceba o ambiente através dos sentidos.";
-        this.sistemaTegumentar = "Protege o corpo de agentes externos, como a pele, unhas e pelos.";
+        this.sistemaTegumentar = "Protege o corpo de agentes externos, como a pele, unhas e pelos.\n";
         this.sistemaReprodutor = "Responsável pela reprodução.";
     }
 
@@ -89,33 +89,52 @@ public class Humano extends Sistemas {
     @Override
     public void quiz() {
         Scanner teclado = new Scanner(System.in);
-        int tentativas = 2;
-        boolean acertou = false;
+        int pontos = 0;
 
-        System.out.println("O esôfago é um orgão que faz parte de qual sistema?");
-        System.out.println("a) Excretor");
-        System.out.println("b) Nervoso");
-        System.out.println("c) Circulatório");
-        System.out.println("d) Digestório");
+        System.out.println(
+                "Quiz sobre o Sistema Animal! Responda todas as perguntas com a letra da alternativa correta.\n");
 
-        while (tentativas > 0 && !acertou) {
-            System.out.print("Resposta: ");
-            String resposta = teclado.nextLine().trim().toLowerCase(); // esse "trim" remove espaços em branco do começo
-                                                                       // e do fim da resposta (evita erros de leitura)
-
-            if (resposta.equals("d")) {
-                System.out.println("Resposta correta! O esôfago faz parte do sistema Digestório.");
-                acertou = true;
-            } else {
-                tentativas--; // decremento. Por exemplo, se a resposta do usuário for diferente de "a", as
-                              // tentativas que valem 2, agora passam a valer 1.
-                if (tentativas > 0) {
-                    System.out.println("Resposta incorreta! Tente novamente.");
-                } else {
-                    System.out.println("Resposta incorreta! A resposta correta é d) Digestório.");
-                }
-            }
+        System.out.println("1) Qual órgão é responsável por bombear o sangue em animais vertebrados?");
+        System.out.println("a) Pulmão");
+        System.out.println("b) Rins");
+        System.out.println("c) Coração");
+        System.out.print("Resposta: ");
+        String r1 = teclado.nextLine().trim().toLowerCase();
+        if (r1.equals("c")) {
+            System.out.println("Resposta correta! O coração bombeia o sangue.");
+            pontos++;
+        } else {
+            System.out.println("Resposta incorreta! A correta é c) Coração.");
         }
+        System.out.println();
+
+        System.out.println("2) Qual sistema controla as funções do corpo, como movimento e sensações?");
+        System.out.println("a) Sistema nervoso");
+        System.out.println("b) Sistema respiratório");
+        System.out.println("c) Sistema excretor");
+        System.out.print("Resposta: ");
+        String r2 = teclado.nextLine().trim().toLowerCase();
+        if (r2.equals("a")) {
+            System.out.println("Resposta correta! O sistema nervoso controla funções corporais.");
+            pontos++;
+        } else {
+            System.out.println("Resposta incorreta! A correta é a) Sistema nervoso.");
+        }
+        System.out.println();
+
+        System.out.println("3) Qual grupo de animais possui vértebras na coluna?");
+        System.out.println("a) Invertebrados");
+        System.out.println("b) Vertebrados");
+        System.out.println("c) Artrópodes");
+        System.out.print("Resposta: ");
+        String r3 = teclado.nextLine().trim().toLowerCase();
+        if (r3.equals("b")) {
+            System.out.println("Resposta correta! Vertebrados têm vértebras.");
+            pontos++;
+        } else {
+            System.out.println("Resposta incorreta! A correta é b) Vertebrados.");
+        }
+        System.out.println();
         System.out.println("\nRevise mais informações sobre o Sistema Humano:");
         System.out.println("- Digestório: " + getSistemaDigestorio());
         System.out.println("- Circulatório:  " + getSistemaCirculatorio());
