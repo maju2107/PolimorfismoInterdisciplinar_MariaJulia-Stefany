@@ -154,7 +154,7 @@ public class Main {
                         espaco();
 
                         System.out.println(
-                                "Você deseja fazer um quiz para aprofundar e testar seus conhecimentos sobre o Sistema Vegetal?");
+                                "Você deseja fazer um quiz para aprofundar e testar seus conhecimentos sobre o Sistema Animal?");
                         querFazerOquiz = teclado.nextLine().toLowerCase();
 
                         if (querFazerOquiz.equals("sim")) {
@@ -176,7 +176,7 @@ public class Main {
                         espaco();
 
                         System.out.println(
-                                "Você deseja fazer um quiz para aprofundar e testar seus conhecimentos sobre o Sistema Vegetal?");
+                                "Você deseja fazer um quiz para aprofundar e testar seus conhecimentos sobre o Sistema Humano?");
                         querFazerOquiz = teclado.nextLine().toLowerCase();
 
                         if (querFazerOquiz.equals("sim")) {

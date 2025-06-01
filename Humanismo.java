@@ -43,9 +43,9 @@ public class Humanismo extends EscolasLiterarias {
 
         if (resposta.equals("c")) {
             System.out.println("Resposta correta! Gil Vicente é o principal autor do teatro humanista português.");
-            pontos++; // incremento, soma +1
+            pontos++; //esse é para incrementar, aí soma-se +1
         } else {
-            System.out.println("Resposta incorreta! A resposta correta é c) Gil VIcente.");
+            System.out.println("Resposta incorreta! A resposta correta é c) Gil Vicente.");
         }
         System.out.println();
 
@@ -57,8 +57,8 @@ public class Humanismo extends EscolasLiterarias {
         String escolha = teclado.nextLine().trim().toLowerCase();
 
         if (escolha.equals("a")) {
-            System.out.println("Resposta correta! O Humanismo surgiu na Itália, no século XIV.");
-            pontos++; // incremento, soma +1
+            System.out.println("Resposta correta! O Humanismo surgiu na Itália, mais especificamente nas cidades de Florença, Roma e Veneza.");
+            pontos++; // esse é para incrementar, aí soma-se +1
         } else {
             System.out.println("Resposta incorreta! A resposta correta é a) Itália.");
         }
@@ -74,7 +74,7 @@ public class Humanismo extends EscolasLiterarias {
         if (opcao.equals("a")) {
             System.out.println(
                     "Resposta correta! Uma das principais características do Humanismo é a valorização do ser humano e da razão.");
-            pontos++; // incremento, soma +1
+            pontos++; // esse é para incrementar, aí soma-se +1
         } else {
             System.out.println("Resposta incorreta! A resposta correta é a) Valorização do ser humano e da razão.");
         }

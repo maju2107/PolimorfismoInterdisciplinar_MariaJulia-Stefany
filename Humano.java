@@ -92,48 +92,86 @@ public class Humano extends Sistemas {
         int pontos = 0;
 
         System.out.println(
-                "Quiz sobre o Sistema Animal! Responda todas as perguntas com a letra da alternativa correta.\n");
+                "Quiz sobre o Sistema Humano! Responda todas as perguntas com a letra da alternativa correta.\n");
 
-        System.out.println("1) Qual órgão é responsável por bombear o sangue em animais vertebrados?");
-        System.out.println("a) Pulmão");
-        System.out.println("b) Rins");
-        System.out.println("c) Coração");
+        System.out.println("1) Qual órgão produz insulina no corpo humano?");
+        System.out.println("a) Fígado");
+        System.out.println("b) Pâncreas");
+        System.out.println("c) Estômago");
         System.out.print("Resposta: ");
         String r1 = teclado.nextLine().trim().toLowerCase();
-        if (r1.equals("c")) {
-            System.out.println("Resposta correta! O coração bombeia o sangue.");
+        if (r1.equals("b")) {
+            System.out.println("Resposta correta! O pâncreas produz insulina.");
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é c) Coração.");
+            System.out.println("Resposta incorreta! A correta é b) Pâncreas.");
         }
         System.out.println();
 
-        System.out.println("2) Qual sistema controla as funções do corpo, como movimento e sensações?");
-        System.out.println("a) Sistema nervoso");
-        System.out.println("b) Sistema respiratório");
-        System.out.println("c) Sistema excretor");
+        System.out.println("2) Qual sistema transporta oxigênio e nutrientes por todo o corpo?");
+        System.out.println("a) Sistema circulatório");
+        System.out.println("b) Sistema digestório");
+        System.out.println("c) Sistema esquelético");
         System.out.print("Resposta: ");
         String r2 = teclado.nextLine().trim().toLowerCase();
         if (r2.equals("a")) {
-            System.out.println("Resposta correta! O sistema nervoso controla funções corporais.");
+            System.out.println("Resposta correta! O sistema circulatório faz esse transporte.");
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é a) Sistema nervoso.");
+            System.out.println("Resposta incorreta! A correta é a) Sistema circulatório.");
         }
         System.out.println();
 
-        System.out.println("3) Qual grupo de animais possui vértebras na coluna?");
-        System.out.println("a) Invertebrados");
-        System.out.println("b) Vertebrados");
-        System.out.println("c) Artrópodes");
+        System.out.println("3) Qual parte do cérebro é considerada centro de controle das funções vitais?");
+        System.out.println("a) Córtex cerebral");
+        System.out.println("b) Cerebelo");
+        System.out.println("c) Tronco encefálico");
         System.out.print("Resposta: ");
         String r3 = teclado.nextLine().trim().toLowerCase();
-        if (r3.equals("b")) {
-            System.out.println("Resposta correta! Vertebrados têm vértebras.");
+        if (r3.equals("c")) {
+            System.out.println("Resposta correta! O tronco encefálico controla funções vitais.");
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é b) Vertebrados.");
+            System.out.println("Resposta incorreta! A correta é c) Tronco encefálico.");
         }
+        System.out.println();
+
+         System.out.println("\nVocê acertou " + pontos + " de 3 perguntas!");
+
+        switch (pontos) {
+            case 3:
+                System.out.println("\nParabéns! Você ganhou a Medalha de Ouro");
+                System.out.println("  *********************");
+                System.out.println("  *     CAMPEÃO(A)     *");
+                System.out.println("  *********************");
+                System.out.println("     \\o/    ");
+                System.out.println("      |     ");
+                System.out.println("     / \\   ");
+                break;
+
+            case 2:
+                System.out.println("\nParabéns! Você ganhou a Medalha de Prata");
+                System.out.println("  ********************  ");
+                System.out.println("  ***   FOI QUASE LÁ!   ***");
+                System.out.println("  ********************  ");
+
+                break;
+
+            case 1:
+                System.out.println("\nParábens! Você ganhou a Medalha de Bronze");
+                System.out.println("  +++++++++++++++++");
+                System.out.println("  +++++++++++++++++");
+                System.out.println("  +     BOM       +");
+                break;
+
+            default:
+                System.out.println("Que pena! Bora tentar de novo para ganhar uma medalha.");
+                System.out.println("    (._.)    ");
+                System.out.println("    <|>     ");
+                System.out.println("    / \\    ");
+                break;
+        }
+
         System.out.println();
         System.out.println("\nRevise mais informações sobre o Sistema Humano:");
         System.out.println("- Digestório: " + getSistemaDigestorio());
