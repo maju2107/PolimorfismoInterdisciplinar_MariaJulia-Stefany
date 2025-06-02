@@ -17,10 +17,10 @@ As disciplinas escolhidas e seus temas foram: **Português (Escolas Literárias)
 ## 📂 **Estrutura do Projeto**
 
 📁 src/ → Código fonte  
- | 📂principal/
- | 📂 portugues/
- | 📂 historia/
- | 📂 biologia/
+ - 📂 principal/
+ - 📂 portugues/
+ - 📂 historia/
+ - 📂 biologia/
 
 ---
 
