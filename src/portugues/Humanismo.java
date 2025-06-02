@@ -1,3 +1,5 @@
+package portugues;
+
 import java.util.Scanner;
 
 public class Humanismo extends EscolasLiterarias {

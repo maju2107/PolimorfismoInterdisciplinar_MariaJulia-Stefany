@@ -1,3 +1,5 @@
+package biologia;
+
 import java.util.Scanner;
 
 public class Vegetal extends Sistemas {

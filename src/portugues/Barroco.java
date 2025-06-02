@@ -1,3 +1,5 @@
+package portugues;
+
 import java.util.Scanner;
 
 public class Barroco extends EscolasLiterarias {

@@ -1,3 +1,5 @@
+package portugues;
+
 public abstract class EscolasLiterarias {
 
     private String nome;
