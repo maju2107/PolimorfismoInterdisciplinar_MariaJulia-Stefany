@@ -59,7 +59,7 @@ As disciplinas escolhidas e seus temas foram: **Português (Escolas Literárias)
 
 ---
 
-## **Alunas**
+## 👧🏻 **Alunas**
 - Stefany Novais
 - Maria Júlia Araújo
 
