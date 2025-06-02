@@ -30,7 +30,7 @@ public class Humano extends Sistemas {
         this.sistemaMuscular = "Responsável pelos movimentos do corpo.";
         this.sistemaImunologico = "Defende o corpo contra doenças.";
         this.sistemaSensorial = "Permite que o corpo perceba o ambiente através dos sentidos.";
-        this.sistemaTegumentar = "Protege o corpo de agentes externos, como a pele, unhas e pelos.";
+        this.sistemaTegumentar = "Protege o corpo de agentes externos, como a pele, unhas e pelos.\n";
         this.sistemaReprodutor = "Responsável pela reprodução.";
     }
 
@@ -91,33 +91,90 @@ public class Humano extends Sistemas {
     @Override
     public void quiz() {
         Scanner teclado = new Scanner(System.in);
-        int tentativas = 2;
-        boolean acertou = false;
+        int pontos = 0;
 
-        System.out.println("O esôfago é um orgão que faz parte de qual sistema?");
-        System.out.println("a) Excretor");
-        System.out.println("b) Nervoso");
-        System.out.println("c) Circulatório");
-        System.out.println("d) Digestório");
+        System.out.println(
+                "Quiz sobre o Sistema Humano! Responda todas as perguntas com a letra da alternativa correta.\n");
 
-        while (tentativas > 0 && !acertou) {
-            System.out.print("Resposta: ");
-            String resposta = teclado.nextLine().trim().toLowerCase(); // esse "trim" remove espaços em branco do começo
-                                                                       // e do fim da resposta (evita erros de leitura)
-
-            if (resposta.equals("d")) {
-                System.out.println("Resposta correta! O esôfago faz parte do sistema Digestório.");
-                acertou = true;
-            } else {
-                tentativas--; // decremento. Por exemplo, se a resposta do usuário for diferente de "a", as
-                              // tentativas que valem 2, agora passam a valer 1.
-                if (tentativas > 0) {
-                    System.out.println("Resposta incorreta! Tente novamente.");
-                } else {
-                    System.out.println("Resposta incorreta! A resposta correta é d) Digestório.");
-                }
-            }
+        System.out.println("1) Qual órgão produz insulina no corpo humano?");
+        System.out.println("a) Fígado");
+        System.out.println("b) Pâncreas");
+        System.out.println("c) Estômago");
+        System.out.print("Resposta: ");
+        String r1 = teclado.nextLine().trim().toLowerCase();
+        if (r1.equals("b")) {
+            System.out.println("Resposta correta! O pâncreas produz insulina.");
+            pontos++;
+        } else {
+            System.out.println("Resposta incorreta! A correta é b) Pâncreas.");
         }
+        System.out.println();
+
+        System.out.println("2) Qual sistema transporta oxigênio e nutrientes por todo o corpo?");
+        System.out.println("a) Sistema circulatório");
+        System.out.println("b) Sistema digestório");
+        System.out.println("c) Sistema esquelético");
+        System.out.print("Resposta: ");
+        String r2 = teclado.nextLine().trim().toLowerCase();
+        if (r2.equals("a")) {
+            System.out.println("Resposta correta! O sistema circulatório faz esse transporte.");
+            pontos++;
+        } else {
+            System.out.println("Resposta incorreta! A correta é a) Sistema circulatório.");
+        }
+        System.out.println();
+
+        System.out.println("3) Qual parte do cérebro é considerada centro de controle das funções vitais?");
+        System.out.println("a) Córtex cerebral");
+        System.out.println("b) Cerebelo");
+        System.out.println("c) Tronco encefálico");
+        System.out.print("Resposta: ");
+        String r3 = teclado.nextLine().trim().toLowerCase();
+        if (r3.equals("c")) {
+            System.out.println("Resposta correta! O tronco encefálico controla funções vitais.");
+            pontos++;
+        } else {
+            System.out.println("Resposta incorreta! A correta é c) Tronco encefálico.");
+        }
+        System.out.println();
+
+         System.out.println("\nVocê acertou " + pontos + " de 3 perguntas!");
+
+        switch (pontos) {
+            case 3:
+                System.out.println("\nParabéns! Você ganhou a Medalha de Ouro");
+                System.out.println("  *********************");
+                System.out.println("  *     CAMPEÃO(A)     *");
+                System.out.println("  *********************");
+                System.out.println("     \\o/    ");
+                System.out.println("      |     ");
+                System.out.println("     / \\   ");
+                break;
+
+            case 2:
+                System.out.println("\nParabéns! Você ganhou a Medalha de Prata");
+                System.out.println("  ********************  ");
+                System.out.println("  ***   FOI QUASE LÁ!   ***");
+                System.out.println("  ********************  ");
+
+                break;
+
+            case 1:
+                System.out.println("\nParábens! Você ganhou a Medalha de Bronze");
+                System.out.println("  +++++++++++++++++");
+                System.out.println("  +++++++++++++++++");
+                System.out.println("  +     BOM       +");
+                break;
+
+            default:
+                System.out.println("Que pena! Bora tentar de novo para ganhar uma medalha.");
+                System.out.println("    (._.)    ");
+                System.out.println("    <|>     ");
+                System.out.println("    / \\    ");
+                break;
+        }
+
+        System.out.println();
         System.out.println("\nRevise mais informações sobre o Sistema Humano:");
         System.out.println("- Digestório: " + getSistemaDigestorio());
         System.out.println("- Circulatório:  " + getSistemaCirculatorio());
