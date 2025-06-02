@@ -3,7 +3,7 @@
 ## 📌 **Sobre o Projeto**
 O projeto tem como objetivo aplicar o conceito de polimorfismo a partir de temas de disciplinas da base comum, criando uma aplicação orientada a objetos com entrada dinâmica de dados, interação com o usuário e organização modular.
 
-As disciplinas escolhidas e seus temas foram: **Português (Escolas Literárias)**, **História (Civilizações Antigas)** **Biologia (Sistemas)**.
+As disciplinas escolhidas e seus temas foram: **Português (Escolas Literárias - Barroco, Humanismo e Romantismo)**, **História (Civilizações Antigas - Povos Pré-Colombianos, Império Romano e Egito Antigo)** **Biologia (Sistemas - Humano, Vegetal e Animal)**.
 
 ---
 
