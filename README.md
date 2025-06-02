@@ -17,15 +17,16 @@ As disciplinas escolhidas e seus temas foram: **Português (Escolas Literárias)
 ## 📂 **Estrutura do Projeto**
 
 📁 src/ → Código fonte  
- |--📂principal/
- |--📂 portugues/
- |--📂 historia/
- |--📂 biologia/
+ |__📂principal/
+ |__📂 portugues/
+ |__📂 historia/
+ |__📂 biologia/
 
 ---
 
 ## 🛠 **Compilação e Execução **
-1️⃣ Certifique-se de que tem o Java instalado (`java -version`).
+1️⃣ Certifique-se de que tem o Java instalado (`java -version`)
+
 2️⃣ **Compile o código no terminal com:**: 
 
    ```bash
