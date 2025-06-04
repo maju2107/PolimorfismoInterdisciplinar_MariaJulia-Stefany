@@ -27,7 +27,13 @@ As disciplinas escolhidas e seus temas foram: **Português (Escolas Literárias 
 ## 🛠 **Compilação e Execução **
 1️⃣ Certifique-se de que tem o Java instalado (`java -version`)
 
-2️⃣ **Compile o código no terminal com:**: 
+2️⃣ Entre na pasta do projeto 
+
+   ```bash
+   cd src  
+  ```
+
+3️⃣ **Compile o código no terminal com:**: 
 
    ```bash
    javac -d . principal/Main.java opcoes/*.java  
@@ -45,8 +51,7 @@ As disciplinas escolhidas e seus temas foram: **Português (Escolas Literárias 
    javac -d . principal/Main.java biologia/*.java     
   ```
 
-
-3️⃣ **Execute o código no terminal com:**:
+4️⃣ **Execute o código no terminal com:**:
 
   ```bash
     java principal.Main            
