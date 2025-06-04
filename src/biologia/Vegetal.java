@@ -1,5 +1,6 @@
 package biologia;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Vegetal extends Sistemas {
@@ -29,6 +30,8 @@ public class Vegetal extends Sistemas {
         return sistemaVascular;
     }
 
+    // sobrecarga de métodos
+
     @Override
     public String tipo() {
         return tipoVegetal;
@@ -38,16 +41,18 @@ public class Vegetal extends Sistemas {
     public void quiz() {
         Scanner teclado = new Scanner(System.in);
         int pontos = 0;
-        System.out.println(
-                "Quiz sobre o Sistema Vegetal! Responda todas as perguntas com a letra da alternativa correta.\n");
+        ArrayList<String> respostas = new ArrayList<String>();
+        int ordem =  1;
+
+        System.out.println("Quiz sobre o Sistema Vegetal! Responda todas as perguntas com a letra da alternativa correta.\n");
 
         System.out.println("1) Qual estrutura é responsável pela fotossíntese nas plantas?");
         System.out.println("a) Raiz");
         System.out.println("b) Folha");
         System.out.println("c) Semente");
         System.out.print("Resposta: ");
-        String r1 = teclado.nextLine().trim().toLowerCase();
-        if (r1.equals("b")) {
+        String resposta1 = teclado.nextLine().trim().toLowerCase();
+        if (resposta1.equals("b")) {
             System.out.println("Resposta correta! A fotossíntese ocorre nas folhas.");
             pontos++;
         } else {
@@ -60,8 +65,8 @@ public class Vegetal extends Sistemas {
         System.out.println("b) Xilema");
         System.out.println("c) Parênquima");
         System.out.print("Resposta: ");
-        String r2 = teclado.nextLine().trim().toLowerCase();
-        if (r2.equals("b")) {
+        String resposta2 = teclado.nextLine().trim().toLowerCase();
+        if (resposta2.equals("b")) {
             System.out.println("Resposta correta! O xilema transporta água e minerais.");
             pontos++;
         } else {
@@ -74,8 +79,8 @@ public class Vegetal extends Sistemas {
         System.out.println("b) Germinação");
         System.out.println("c) Polinização");
         System.out.print("Resposta: ");
-        String r3 = teclado.nextLine().trim().toLowerCase();
-        if (r3.equals("a")) {
+        String resposta3 = teclado.nextLine().trim().toLowerCase();
+        if (resposta3.equals("a")) {
             System.out.println("Resposta correta! A liberação de água pelas folhas é a transpiração.");
             pontos++;
         } else {
@@ -83,7 +88,17 @@ public class Vegetal extends Sistemas {
         }
         System.out.println();
 
+        respostas.add(resposta1); // alimentando o arraylist
+        respostas.add(resposta2);
+        respostas.add(resposta3);
+
         System.out.println("\nVocê acertou " + pontos + " de 3 perguntas!");
+        System.out.println("E suas respostas foram: ");
+       
+        for (String i : respostas) {
+            System.out.println( ordem +")" +i);
+            ordem++;
+        }
 
         switch (pontos) {
             case 3:

@@ -1,5 +1,6 @@
 package portugues;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Romantismo extends EscolasLiterarias {
@@ -39,6 +40,8 @@ public class Romantismo extends EscolasLiterarias {
     public void quiz() {
         Scanner teclado = new Scanner(System.in);
         int pontos = 0;
+        ArrayList<String> respostas = new ArrayList<String>();
+        int ordem =  1;
 
         System.out.println("Quiz sobre Romantismo! Responda todas as perguntas com a letra da alternativa correta.\n");
 
@@ -47,10 +50,10 @@ public class Romantismo extends EscolasLiterarias {
         System.out.println("b) Gregório de Matos");
         System.out.println("c) Padre Antônio Vieira");
         System.out.println("Resposta: ");
-        String resposta = teclado.nextLine().trim().toLowerCase(); // esse "trim" remove espaços em branco do começo
+        String resposta1 = teclado.nextLine().trim().toLowerCase(); // esse "trim" remove espaços em branco do começo
                                                                    // e do fim da resposta (evita erros de leitura)
 
-        if (resposta.equals("a")) {
+        if (resposta1.equals("a")) {
             System.out.println("Resposta correta! José de Alencar é um dos principais autores do Romance Indianista.");
             pontos++; // incremento, soma +1
         } else {
@@ -63,9 +66,9 @@ public class Romantismo extends EscolasLiterarias {
         System.out.println("b) Iracema");
         System.out.println("c) A Moreninha");
         System.out.println("Resposta: ");
-        String escolha = teclado.nextLine().trim().toLowerCase();
+        String resposta2 = teclado.nextLine().trim().toLowerCase();
 
-        if (escolha.equals("c")) {
+        if (resposta2.equals("c")) {
             System.out.println(
                     "Resposta correta! 'A Moreninha' é um romance urbano que retrata a vida social e os conflitos amorosos da alta sociedade carioca do século XIX.");
             pontos++; // incremento, soma +1
@@ -79,9 +82,9 @@ public class Romantismo extends EscolasLiterarias {
         System.out.println("b) Pessimismo e arrebatamento sentimental");
         System.out.println("c) Crítica social e tom político");
         System.out.println("Resposta: ");
-        String opcao = teclado.nextLine().trim().toLowerCase();
+        String resposta3 = teclado.nextLine().trim().toLowerCase();
 
-        if (opcao.equals("b")) {
+        if (resposta3.equals("b")) {
             System.out.println(
                     "Resposta correta! Pessimismo e arrebatamento sentimental é uma das características da segunda geração romântica.");
             pontos++; // incremento, soma +1
@@ -90,7 +93,18 @@ public class Romantismo extends EscolasLiterarias {
         }
         System.out.println();
 
+        respostas.add(resposta1); // alimentando o arraylist
+        respostas.add(resposta2);
+        respostas.add(resposta3);
+
         System.out.println("\nVocê acertou " + pontos + " de 3 perguntas!");
+        System.out.println("E suas respostas foram: ");
+       
+        for (String i : respostas) {
+            System.out.println( ordem +")" +i);
+            ordem++;
+        }
+
 
         switch (pontos) {
             case 3:

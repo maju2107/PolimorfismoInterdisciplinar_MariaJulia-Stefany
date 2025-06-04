@@ -1,5 +1,6 @@
 package biologia;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Humano extends Sistemas {
@@ -83,6 +84,8 @@ public class Humano extends Sistemas {
         return sistemaReprodutor;
     }
 
+    // sobrecarga de métodos
+
     @Override
     public String tipo() {
         return tipoHumano;
@@ -92,6 +95,8 @@ public class Humano extends Sistemas {
     public void quiz() {
         Scanner teclado = new Scanner(System.in);
         int pontos = 0;
+        ArrayList<String> respostas = new ArrayList<String>();
+        int ordem =  1;
 
         System.out.println(
                 "Quiz sobre o Sistema Humano! Responda todas as perguntas com a letra da alternativa correta.\n");
@@ -101,8 +106,8 @@ public class Humano extends Sistemas {
         System.out.println("b) Pâncreas");
         System.out.println("c) Estômago");
         System.out.print("Resposta: ");
-        String r1 = teclado.nextLine().trim().toLowerCase();
-        if (r1.equals("b")) {
+        String resposta1 = teclado.nextLine().trim().toLowerCase();
+        if (resposta1.equals("b")) {
             System.out.println("Resposta correta! O pâncreas produz insulina.");
             pontos++;
         } else {
@@ -115,8 +120,8 @@ public class Humano extends Sistemas {
         System.out.println("b) Sistema digestório");
         System.out.println("c) Sistema esquelético");
         System.out.print("Resposta: ");
-        String r2 = teclado.nextLine().trim().toLowerCase();
-        if (r2.equals("a")) {
+        String resposta2 = teclado.nextLine().trim().toLowerCase();
+        if (resposta2.equals("a")) {
             System.out.println("Resposta correta! O sistema circulatório faz esse transporte.");
             pontos++;
         } else {
@@ -129,8 +134,8 @@ public class Humano extends Sistemas {
         System.out.println("b) Cerebelo");
         System.out.println("c) Tronco encefálico");
         System.out.print("Resposta: ");
-        String r3 = teclado.nextLine().trim().toLowerCase();
-        if (r3.equals("c")) {
+        String resposta3 = teclado.nextLine().trim().toLowerCase();
+        if (resposta3.equals("c")) {
             System.out.println("Resposta correta! O tronco encefálico controla funções vitais.");
             pontos++;
         } else {
@@ -138,8 +143,18 @@ public class Humano extends Sistemas {
         }
         System.out.println();
 
-         System.out.println("\nVocê acertou " + pontos + " de 3 perguntas!");
+        respostas.add(resposta1); // alimentando o arraylist
+        respostas.add(resposta2);
+        respostas.add(resposta3);
 
+        System.out.println("\nVocê acertou " + pontos + " de 3 perguntas!");
+        System.out.println("E suas respostas foram: ");
+       
+        for (String i : respostas) {
+            System.out.println( ordem +")" +i);
+            ordem++;
+        }
+        
         switch (pontos) {
             case 3:
                 System.out.println("\nParabéns! Você ganhou a Medalha de Ouro");

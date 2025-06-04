@@ -1,5 +1,6 @@
 package historia;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PovosPreColombianos extends CivilizacoesAntigas {
@@ -18,6 +19,8 @@ public class PovosPreColombianos extends CivilizacoesAntigas {
         this.PovosTupinambas = "Os tupinambás são um povo originário brasileiro, parte da família linguística Tupi-Guarani, que habitava extensas áreas do litoral do Brasil,\ndestacando-se nas regiões Nordeste, Sudeste e Sul.\nSua economia baseava-se na agricultura, pesca e caça, com o comércio entre comunidades indígenas contribuindo para a circulação de bens.\nViviam em aldeias organizadas, construindo casas com paredes de pau a pique e cobertura de palha, promovendo a convivência comunitária";
     }
 
+    // sobrecarga de métodos
+
     @Override
     public void descubra(){
         System.out.println("Descubra um pouco sobre os povos Pré-Colombianos : Astecas, Incas, Maias, Inuítes e Tupinambás:");
@@ -32,34 +35,102 @@ public class PovosPreColombianos extends CivilizacoesAntigas {
     public void quiz(){
 
     Scanner teclado = new Scanner(System.in);
-    int tentativas = 2;
-    boolean acertou = false;
+    int pontos = 0;
+    ArrayList<String> respostas = new ArrayList<String>();
+    int ordem =  1;
+        
+        System.out.println("Quiz sobre os Povos Pré-Colombianos! Responda todas as perguntas com a letra da alternativa correta.\n");
 
-    System.out.println("Qual dos povos abaixo em uma ilha em um lago?:");
-    System.out.println("a) Tupinambás");
-    System.out.println("b) Maias");
-    System.out.println("c) Astecas");
-    System.out.println("d) Incas");
-    System.out.println("e) Inuítes");
-
-    while (tentativas > 0 && !acertou) {
-    System.out.print("Resposta: ");
-    String resposta = teclado.nextLine().trim().toLowerCase(); // esse "trim" remove espaços em branco do começo
-                                                                       // e do fim da resposta (evita erros de leitura)
-
-    if (resposta.equals("c")) {
-        System.out.println("Resposta correta! O povo Asteca vivia na ilha de Tenochtitlán, localizada no lago Texcoco.");
-            acertou = true;
-    } else {
-        tentativas--; // decremento. Por exemplo, se a resposta do usuário for diferente de "c", as tentativas que valem 2, agora passam a valer 1.
-        if (tentativas > 0) {
-            System.out.println("Resposta incorreta! Tente novamente.");
+        System.out.println("Qual dos povos abaixo em uma ilha em um lago?:");
+        System.out.println("a) Tupinambás");
+        System.out.println("b) Maias");
+        System.out.println("c) Incas");
+        System.out.println("d) Astecas");
+        System.out.println("e) Inuítes");
+            String resposta1 = teclado.nextLine().trim().toLowerCase();
+        if (resposta1.equals("d")) {
+            System.out.println("Resposta correta! O povo Asteca vivia na ilha de Tenochtitlán, localizada no lago Texcoco.");
+            pontos++;
         } else {
-            System.out.println("Resposta incorreta! A resposta correta é C) Astecas.");
-           }
-      }
+            System.out.println("Resposta incorreta! A correta é d) Astecas.");
+        }
+        System.out.println();
 
-    }
+        System.out.println("2) Quando Cristóvão Colombo chegou à América?");
+        System.out.println("a) Em 15 de novembro de 1400.");
+        System.out.println("b) Em 22 de janeiro de 1510.");
+        System.out.println("c) Em 12 de outubro de 1492.");
+        System.out.println("d) Ele nunca chegou à América.");
+        System.out.print("Resposta: ");
+        String resposta2 = teclado.nextLine().trim().toLowerCase();
+        if (resposta2.equals("c")) {
+            System.out.println("Resposta correta! Cristóvão Colombo chegou à América em 12 de outubro de 1492.");
+            pontos++;
+        } else {
+            System.out.println("Resposta incorreta! A correta é c) A Em 12 de outubro de 1492.");
+        }
+        System.out.println();
+
+        System.out.println("3) Qual a alternativa falsa?");
+        System.out.println("a) Os Maias tinham um refinado conhecimento em química.");
+        System.out.println("b) Os Incas viviam na região da Cordilheira dos Andes.");
+        System.out.println("c) Os Tupinambás são um povo um povo originário brasileiro");
+        System.out.println("d) O povo Inuíte foi exterminado há 10 mil anos atrás.");
+        System.out.print("Resposta: ");
+        String resposta3 = teclado.nextLine().trim().toLowerCase();
+        if (resposta3.equals("d")) {
+            System.out.println("Resposta correta! O povo Inuíte vive há mais de 10 mil anos no Ártico.");
+            pontos++;
+        } else {
+            System.out.println("Resposta incorreta! A correta é d) O povo Inuíte foi exterminado há 10 mil anos atrás.");
+        }
+        System.out.println();
+        
+        respostas.add(resposta1); // alimentando o arraylist
+        respostas.add(resposta2);
+        respostas.add(resposta3);
+
+        System.out.println("\nVocê acertou " + pontos + " de 3 perguntas!");
+        System.out.println("E suas respostas foram: ");
+       
+        for (String i : respostas) {
+            System.out.println( ordem +")" +i);
+            ordem++;
+        }
+
+        switch (pontos) {
+            case 3:
+                System.out.println("\nParabéns! Você ganhou a Medalha de Ouro");
+                System.out.println("  *********************");
+                System.out.println("  *     CAMPEÃO(A)     *");
+                System.out.println("  *********************");
+                System.out.println("     \\o/    ");
+                System.out.println("      |     ");
+                System.out.println("     / \\   ");
+                break;
+
+            case 2:
+                System.out.println("\nParabéns! Você ganhou a Medalha de Prata");
+                System.out.println("  ********************  ");
+                System.out.println("  ***   FOI QUASE LÁ!   ***");
+                System.out.println("  ********************  ");
+
+                break;
+
+            case 1:
+                System.out.println("\nBoa, parabéns! Você ganhou a Medalha de Bronze");
+                System.out.println("  +++++++++++++++++");
+                System.out.println("  +++++++++++++++++");
+                System.out.println("  +     BOM       +");
+                break;
+
+            default:
+                System.out.println("Que pena! Bora tentar de novo para ganhar uma medalha.");
+                System.out.println("    (._.)    ");
+                System.out.println("    <|>     ");
+                System.out.println("    / \\    ");
+                break;
+        }
 
     }
 
@@ -70,3 +141,4 @@ public class PovosPreColombianos extends CivilizacoesAntigas {
     }
     
 }
+

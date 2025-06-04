@@ -1,5 +1,6 @@
 package portugues;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Barroco extends EscolasLiterarias {
@@ -33,6 +34,9 @@ public class Barroco extends EscolasLiterarias {
     public void quiz() {
         Scanner teclado = new Scanner(System.in);
         int pontos = 0;
+        ArrayList<String> respostas = new ArrayList<String>();
+        int ordem =  1;
+
         System.out.println("Quiz sobre o Barroco! Responda todas as perguntas com a letra da alternativa correta.\n");
 
         System.out.println("1) Qual dos autores abaixo pertence ao Barroco Brasileiro?");
@@ -77,7 +81,18 @@ public class Barroco extends EscolasLiterarias {
         }
         System.out.println();
 
+        respostas.add(resposta1);
+        respostas.add(resposta2);
+        respostas.add(resposta3);
+
         System.out.println("\nVocê acertou " + pontos + " de 3 perguntas!");
+        System.out.println("E suas respostas foram: ");
+       
+        for (String i : respostas) {
+            System.out.println( ordem +")" +i);
+            ordem++;
+        }
+
 
         switch (pontos) {
             case 3:

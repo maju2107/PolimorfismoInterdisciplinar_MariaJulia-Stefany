@@ -1,5 +1,6 @@
 package biologia;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Animal extends Sistemas {
@@ -29,6 +30,8 @@ public class Animal extends Sistemas {
         return sistemaNervosoSimplesOuComplexo;
     }
 
+    // sobrecarga de métodos
+
     @Override
     public String tipo() {
         return tipoAnimal;
@@ -38,6 +41,8 @@ public class Animal extends Sistemas {
     public void quiz() {
         Scanner teclado = new Scanner(System.in);
         int pontos = 0;
+        ArrayList<String> respostas = new ArrayList<String>();
+        int ordem =  1;
         System.out.println(
                 "Quiz sobre o Sistema Animal! Responda todas as perguntas com a letra da alternativa correta.\n");
 
@@ -46,8 +51,8 @@ public class Animal extends Sistemas {
         System.out.println("b) Rins");
         System.out.println("c) Coração");
         System.out.print("Resposta: ");
-        String r1 = teclado.nextLine().trim().toLowerCase();
-        if (r1.equals("c")) {
+        String resposta1 = teclado.nextLine().trim().toLowerCase();
+        if (resposta1.equals("c")) {
             System.out.println("Resposta correta! O coração bombeia o sangue.");
             pontos++;
         } else {
@@ -60,8 +65,8 @@ public class Animal extends Sistemas {
         System.out.println("b) Sistema respiratório");
         System.out.println("c) Sistema excretor");
         System.out.print("Resposta: ");
-        String r2 = teclado.nextLine().trim().toLowerCase();
-        if (r2.equals("a")) {
+        String resposta2 = teclado.nextLine().trim().toLowerCase();
+        if (resposta2.equals("a")) {
             System.out.println("Resposta correta! O sistema nervoso controla funções corporais.");
             pontos++;
         } else {
@@ -74,8 +79,8 @@ public class Animal extends Sistemas {
         System.out.println("b) Vertebrados");
         System.out.println("c) Artrópodes");
         System.out.print("Resposta: ");
-        String r3 = teclado.nextLine().trim().toLowerCase();
-        if (r3.equals("b")) {
+        String resposta3 = teclado.nextLine().trim().toLowerCase();
+        if (resposta3.equals("b")) {
             System.out.println("Resposta correta! Vertebrados têm vértebras.");
             pontos++;
         } else {
@@ -83,7 +88,17 @@ public class Animal extends Sistemas {
         }
         System.out.println();
 
+        respostas.add(resposta1); // alimentando o arraylist
+        respostas.add(resposta2);
+        respostas.add(resposta3);
+
         System.out.println("\nVocê acertou " + pontos + " de 3 perguntas!");
+        System.out.println("E suas respostas foram: ");
+       
+        for (String i : respostas) {
+            System.out.println( ordem +")" +i);
+            ordem++;
+        }
 
         switch (pontos) {
             case 3:
