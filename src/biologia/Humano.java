@@ -17,6 +17,13 @@ public class Humano extends Sistemas {
     private String sistemaTegumentar;
     private String sistemaReprodutor;
 
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_ORANGE = "\u001B[38;5;208m";
+
     private String tipoHumano = "Humano";
 
     // construtores
@@ -108,10 +115,10 @@ public class Humano extends Sistemas {
         System.out.print("Resposta: ");
         String resposta1 = teclado.nextLine().trim().toLowerCase();
         if (resposta1.equals("b")) {
-            System.out.println("Resposta correta! O pâncreas produz insulina.");
+            System.out.println(ANSI_GREEN + "Resposta correta! O pâncreas produz insulina." +ANSI_RESET);
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é b) Pâncreas.");
+            System.out.println(ANSI_RED +"Resposta incorreta! A correta é b) Pâncreas." +ANSI_RESET);
         }
         System.out.println();
 
@@ -122,10 +129,10 @@ public class Humano extends Sistemas {
         System.out.print("Resposta: ");
         String resposta2 = teclado.nextLine().trim().toLowerCase();
         if (resposta2.equals("a")) {
-            System.out.println("Resposta correta! O sistema circulatório faz esse transporte.");
+            System.out.println(ANSI_GREEN +"Resposta correta! O sistema circulatório faz esse transporte."+ANSI_RESET);
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é a) Sistema circulatório.");
+            System.out.println(ANSI_RED +"Resposta incorreta! A correta é a) Sistema circulatório."+ANSI_RESET);
         }
         System.out.println();
 
@@ -136,10 +143,10 @@ public class Humano extends Sistemas {
         System.out.print("Resposta: ");
         String resposta3 = teclado.nextLine().trim().toLowerCase();
         if (resposta3.equals("c")) {
-            System.out.println("Resposta correta! O tronco encefálico controla funções vitais.");
+            System.out.println(ANSI_GREEN +"Resposta correta! O tronco encefálico controla funções vitais."+ANSI_RESET);
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é c) Tronco encefálico.");
+            System.out.println(ANSI_RED +"Resposta incorreta! A correta é c) Tronco encefálico."+ANSI_RESET);
         }
         System.out.println();
 
@@ -157,28 +164,28 @@ public class Humano extends Sistemas {
         
         switch (pontos) {
             case 3:
-                System.out.println("\nParabéns! Você ganhou a Medalha de Ouro");
-                System.out.println("  *********************");
-                System.out.println("  *     CAMPEÃO(A)     *");
-                System.out.println("  *********************");
-                System.out.println("     \\o/    ");
-                System.out.println("      |     ");
-                System.out.println("     / \\   ");
+                System.out.println(ANSI_YELLOW +"\nParabéns! Você ganhou a Medalha de Ouro"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW +"  *********************"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW +"  *     CAMPEÃO(A)     *"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW +"  *********************"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW +"     \\o/    "+ANSI_RESET);
+                System.out.println(ANSI_YELLOW +"      |     "+ANSI_RESET);
+                System.out.println(ANSI_YELLOW +"     / \\   "+ANSI_RESET);
                 break;
 
             case 2:
-                System.out.println("\nParabéns! Você ganhou a Medalha de Prata");
-                System.out.println("  ********************  ");
-                System.out.println("  ***   FOI QUASE LÁ!   ***");
-                System.out.println("  ********************  ");
+                System.out.println(ANSI_CYAN+"\nParabéns! Você ganhou a Medalha de Prata"+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ********************  "+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ***   FOI QUASE LÁ!   ***"+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ********************  "+ANSI_RESET);
 
                 break;
 
             case 1:
-                System.out.println("\nParábens! Você ganhou a Medalha de Bronze");
-                System.out.println("  +++++++++++++++++");
-                System.out.println("  +++++++++++++++++");
-                System.out.println("  +     BOM       +");
+                System.out.println(ANSI_ORANGE+"\nParábens! Você ganhou a Medalha de Bronze"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +++++++++++++++++"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +++++++++++++++++"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +     BOM       +"+ANSI_RESET);
                 break;
 
             default:

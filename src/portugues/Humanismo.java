@@ -9,6 +9,13 @@ public class Humanismo extends EscolasLiterarias {
     private String autos;
     private String farsas;
 
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_ORANGE = "\u001B[38;5;208m";
+
     // construtores
     public Humanismo() {
         this.autos = "Auto da Barca do Inferno - Gil Vicente";
@@ -47,10 +54,10 @@ public class Humanismo extends EscolasLiterarias {
                                                                    // e do fim da resposta (evita erros de leitura)
 
         if (resposta1.equals("c")) {
-            System.out.println("Resposta correta! Gil Vicente é o principal autor do teatro humanista português.");
+            System.out.println(ANSI_GREEN+"Resposta correta! Gil Vicente é o principal autor do teatro humanista português."+ANSI_RESET);
             pontos++; //esse é para incrementar, aí soma-se +1
         } else {
-            System.out.println("Resposta incorreta! A resposta correta é c) Gil Vicente.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A resposta correta é c) Gil Vicente."+ANSI_RESET);
         }
         System.out.println();
 
@@ -62,10 +69,10 @@ public class Humanismo extends EscolasLiterarias {
         String resposta2 = teclado.nextLine().trim().toLowerCase();
 
         if (resposta2.equals("a")) {
-            System.out.println("Resposta correta! O Humanismo surgiu na Itália, mais especificamente nas cidades de Florença, Roma e Veneza.");
+            System.out.println(ANSI_GREEN+"Resposta correta! O Humanismo surgiu na Itália, mais especificamente nas cidades de Florença, Roma e Veneza."+ANSI_RESET);
             pontos++; // esse é para incrementar, aí soma-se +1
         } else {
-            System.out.println("Resposta incorreta! A resposta correta é a) Itália.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A resposta correta é a) Itália."+ANSI_RESET);
         }
         System.out.println();
 
@@ -78,10 +85,10 @@ public class Humanismo extends EscolasLiterarias {
 
         if (resposta3.equals("a")) {
             System.out.println(
-                    "Resposta correta! Uma das principais características do Humanismo é a valorização do ser humano e da razão.");
+                    ANSI_GREEN+"Resposta correta! Uma das principais características do Humanismo é a valorização do ser humano e da razão."+ANSI_RESET);
             pontos++; // esse é para incrementar, aí soma-se +1
         } else {
-            System.out.println("Resposta incorreta! A resposta correta é a) Valorização do ser humano e da razão.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A resposta correta é a) Valorização do ser humano e da razão."+ANSI_RESET);
         }
         System.out.println();
 
@@ -99,28 +106,28 @@ public class Humanismo extends EscolasLiterarias {
 
         switch (pontos) {
             case 3:
-                System.out.println("\nParabéns! Você ganhou a Medalha de Ouro");
-                System.out.println("  *********************");
-                System.out.println("  *     CAMPEÃO(A)     *");
-                System.out.println("  *********************");
-                System.out.println("     \\o/    ");
-                System.out.println("      |     ");
-                System.out.println("     / \\   ");
+                System.out.println(ANSI_YELLOW+"\nParabéns! Você ganhou a Medalha de Ouro"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"  *********************"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"  *     CAMPEÃO(A)     *"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"  *********************"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"     \\o/    "+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"      |     "+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"     / \\   "+ANSI_RESET);
                 break;
 
             case 2:
-                System.out.println("\nParabéns! Você ganhou a Medalha de Prata");
-                System.out.println("  ********************  ");
-                System.out.println("  ***   FOI QUASE LÁ!   ***");
-                System.out.println("  ********************  ");
+                System.out.println(ANSI_CYAN+"\nParabéns! Você ganhou a Medalha de Prata"+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ********************  "+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ***   FOI QUASE LÁ!   ***"+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ********************  "+ANSI_RESET);
 
                 break;
 
             case 1:
-                System.out.println("\nParábens! Você ganhou a Medalha de Bronze");
-                System.out.println("  +++++++++++++++++");
-                System.out.println("  +++++++++++++++++");
-                System.out.println("  +     BOM       +");
+                System.out.println(ANSI_ORANGE+"\nParábens! Você ganhou a Medalha de Bronze"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +++++++++++++++++"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +++++++++++++++++"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +     BOM       +"+ANSI_RESET);
                 break;
 
             default:

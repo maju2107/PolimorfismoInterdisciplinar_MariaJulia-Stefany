@@ -5,12 +5,14 @@ import java.util.Scanner;
 
 public class Opcao1 {
 
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_MAGENTA = "\u001B[35m";
+
     public void op1() {
 
     Scanner teclado = new Scanner(System.in);
     String escolhaEscolaLiteraria;
     String querFazerOquiz;
-
 
     System.out.println("Digite o nome da Escola Literária você deseja estudar (Barroco, Humanismo ou Romantismo) : ");
     escolhaEscolaLiteraria = teclado.nextLine().toLowerCase();
@@ -26,11 +28,11 @@ public class Opcao1 {
 
         espaco();
 
-        System.out.println(" Você escolheu a Escola Literária: "+barroco.getNome());
+        System.out.println(ANSI_MAGENTA+" Você escolheu a Escola Literária: "+barroco.getNome()+ANSI_RESET);
         espaco();
-        System.out.println(" Você definiu o Barroco com a seguinte palavra: "+barroco.getCaracteristicaPrincipal());
+        System.out.println(ANSI_MAGENTA+" Você definiu o Barroco com a seguinte palavra: "+barroco.getCaracteristicaPrincipal()+ANSI_RESET);
         espaco();
-        System.out.println(" A definição do Barroco é: "+mostrarDefinicaoDeEscolaLiteraria(barroco));
+        System.out.println(ANSI_MAGENTA+" A definição do Barroco é: "+mostrarDefinicaoDeEscolaLiteraria(barroco)+ANSI_RESET);
         espaco();
 
 
@@ -57,11 +59,11 @@ public class Opcao1 {
 
             espaco();
 
-            System.out.println(" Você escolheu a Escola Literária: "+humanismo.getNome());
+            System.out.println(ANSI_MAGENTA+" Você escolheu a Escola Literária: "+humanismo.getNome()+ANSI_RESET);
             espaco();
-            System.out.println(" Você definiu o Humanismo com a seguinte palavra: "+humanismo.getCaracteristicaPrincipal());
+            System.out.println(ANSI_MAGENTA+" Você definiu o Humanismo com a seguinte palavra: "+humanismo.getCaracteristicaPrincipal()+ANSI_RESET);
             espaco();
-            System.out.println(" A definição do Humanismo é: "+mostrarDefinicaoDeEscolaLiteraria(humanismo));
+            System.out.println(ANSI_MAGENTA+" A definição do Humanismo é: "+mostrarDefinicaoDeEscolaLiteraria(humanismo)+ANSI_RESET);
             espaco();
 
 
@@ -87,11 +89,11 @@ public class Opcao1 {
 
                 espaco();
 
-                System.out.println(" Você escolheu a Escola Literária: "+romantismo.getNome());
+                System.out.println(ANSI_MAGENTA+" Você escolheu a Escola Literária: "+romantismo.getNome()+ANSI_RESET);
                 espaco();
-                System.out.println(" Você definiu o Romantismo com a seguinte palavra: "+romantismo.getCaracteristicaPrincipal());
+                System.out.println(ANSI_MAGENTA+" Você definiu o Romantismo com a seguinte palavra: "+romantismo.getCaracteristicaPrincipal()+ANSI_RESET);
                 espaco();
-                System.out.println(" A definição do Romantismo é: "+mostrarDefinicaoDeEscolaLiteraria(romantismo));
+                System.out.println(ANSI_MAGENTA+" A definição do Romantismo é: "+mostrarDefinicaoDeEscolaLiteraria(romantismo)+ANSI_RESET);
                 espaco();
 
                 System.out.println("Você deseja fazer um quiz para aprofundar e testar seus conhecimentos sobre o Romantismo?");

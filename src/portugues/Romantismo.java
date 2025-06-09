@@ -9,6 +9,13 @@ public class Romantismo extends EscolasLiterarias {
     private String RomanceUrbano;
     private String RomanceRegionalista;
 
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_ORANGE = "\u001B[38;5;208m";
+
     private String definicaoDoRomatismo = "O Romantismo foi um movimento literário que surgiu no final do século XVIII e se consolidou no século XIX, influenciado pela Revolução Francesa.\n Ele se caracteriza pela valorização das emoções, subjetividade, idealização do amor e da natureza, além da exaltação do nacionalismo.\n Possui 3 gerações românticas, a primeira maracada pelo nacionalismo, religiosidade e figura dos povos originários como heróis nacionais\n; a segunda marcada por pessimismo, gosto pelo mórbido, angústia e erotismo; e a terceira marcada por críticas socias e políticas, erotismo(sem culpa) e tom declamatório. ";
 
     // construtores
@@ -54,10 +61,10 @@ public class Romantismo extends EscolasLiterarias {
                                                                    // e do fim da resposta (evita erros de leitura)
 
         if (resposta1.equals("a")) {
-            System.out.println("Resposta correta! José de Alencar é um dos principais autores do Romance Indianista.");
+            System.out.println(ANSI_GREEN+"Resposta correta! José de Alencar é um dos principais autores do Romance Indianista."+ANSI_RESET);
             pontos++; // incremento, soma +1
         } else {
-            System.out.println("Resposta incorreta! A resposta correta é a) José de Alencar.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A resposta correta é a) José de Alencar."+ANSI_RESET);
         }
         System.out.println();
 
@@ -70,10 +77,10 @@ public class Romantismo extends EscolasLiterarias {
 
         if (resposta2.equals("c")) {
             System.out.println(
-                    "Resposta correta! 'A Moreninha' é um romance urbano que retrata a vida social e os conflitos amorosos da alta sociedade carioca do século XIX.");
+                    ANSI_GREEN+"Resposta correta! 'A Moreninha' é um romance urbano que retrata a vida social e os conflitos amorosos da alta sociedade carioca do século XIX."+ANSI_RESET);
             pontos++; // incremento, soma +1
         } else {
-            System.out.println("Resposta incorreta! A resposta correta é c) A Moreninha.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A resposta correta é c) A Moreninha."+ANSI_RESET);
         }
         System.out.println();
 
@@ -86,10 +93,10 @@ public class Romantismo extends EscolasLiterarias {
 
         if (resposta3.equals("b")) {
             System.out.println(
-                    "Resposta correta! Pessimismo e arrebatamento sentimental é uma das características da segunda geração romântica.");
+                   ANSI_GREEN+ "Resposta correta! Pessimismo e arrebatamento sentimental é uma das características da segunda geração romântica."+ANSI_RESET);
             pontos++; // incremento, soma +1
         } else {
-            System.out.println("Resposta incorreta! A resposta correta é b) Pessimismo e arrebatamento sentimental.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A resposta correta é b) Pessimismo e arrebatamento sentimental."+ANSI_RESET);
         }
         System.out.println();
 
@@ -108,28 +115,28 @@ public class Romantismo extends EscolasLiterarias {
 
         switch (pontos) {
             case 3:
-                System.out.println("\nParabéns! Você ganhou a Medalha de Ouro");
-                System.out.println("  *********************");
-                System.out.println("  *     CAMPEÃO(A)     *");
-                System.out.println("  *********************");
-                System.out.println("     \\o/    ");
-                System.out.println("      |     ");
-                System.out.println("     / \\   ");
+                System.out.println(ANSI_YELLOW+"\nParabéns! Você ganhou a Medalha de Ouro"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"  *********************"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"  *     CAMPEÃO(A)     *"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"  *********************"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"     \\o/    "+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"      |     "+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"     / \\   "+ANSI_RESET);
                 break;
 
             case 2:
-                System.out.println("\nParabéns! Você ganhou a Medalha de Prata");
-                System.out.println("  ********************  ");
-                System.out.println("  ***   FOI QUASE LÁ!   ***");
-                System.out.println("  ********************  ");
+                System.out.println(ANSI_CYAN+"\nParabéns! Você ganhou a Medalha de Prata"+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ********************  "+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ***   FOI QUASE LÁ!   ***"+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ********************  "+ANSI_RESET);
 
                 break;
 
             case 1:
-                System.out.println("\nParábens! Você ganhou a Medalha de Bronze");
-                System.out.println("  +++++++++++++++++");
-                System.out.println("  +++++++++++++++++");
-                System.out.println("  +     BOM       +");
+                System.out.println(ANSI_ORANGE+"\nParábens! Você ganhou a Medalha de Bronze"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +++++++++++++++++"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +++++++++++++++++"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +     BOM       +"+ANSI_RESET);
                 break;
 
             default:

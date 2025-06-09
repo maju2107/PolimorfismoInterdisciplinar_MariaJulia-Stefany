@@ -8,6 +8,13 @@ public class Barroco extends EscolasLiterarias {
     private String sermoesPadreAntonioVieira;
     private String sonetosGregorioDeMatos;
 
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_ORANGE = "\u001B[38;5;208m";
+
     private String definicaoDoBarroco = "O Barroco foi um movimento literário que surgiu no final do século XVI, influenciado pelo contexto da Reforma Protestante e da Contrarreforma Católica.\n Ele se caracteriza pelo culto ao contraste, explorando oposições como religiosidade x sensualidade, espiritualidade x materialismo, e efemeridade x eternidade.\n Utiliza muitas as figuras de linguagem antítese e paradoxo, apresenta temas como fragilidade humana, fugacidade do tempo e crítica à vaidade além de forte influência religiosa e moralizante. ";
 
     // construtores
@@ -46,10 +53,10 @@ public class Barroco extends EscolasLiterarias {
         System.out.print("Resposta: ");
         String resposta1 = teclado.nextLine().trim().toLowerCase();
         if (resposta1.equals("b")) {
-            System.out.println("Resposta correta! Gregório de Matos é um autor barroco.");
+            System.out.println(ANSI_GREEN+"Resposta correta! Gregório de Matos é um autor barroco."+ANSI_RESET);
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é b) Gregório de Matos.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A correta é b) Gregório de Matos."+ANSI_RESET);
         }
         System.out.println();
 
@@ -60,10 +67,10 @@ public class Barroco extends EscolasLiterarias {
         System.out.print("Resposta: ");
         String resposta2 = teclado.nextLine().trim().toLowerCase();
         if (resposta2.equals("a")) {
-            System.out.println("Resposta correta! O Barroco valoriza o contraste e as antíteses.");
+            System.out.println(ANSI_GREEN+"Resposta correta! O Barroco valoriza o contraste e as antíteses."+ANSI_RESET);
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é a) Culto ao contraste e uso de antíteses.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A correta é a) Culto ao contraste e uso de antíteses."+ANSI_RESET);
         }
         System.out.println();
 
@@ -74,10 +81,10 @@ public class Barroco extends EscolasLiterarias {
         System.out.print("Resposta: ");
         String resposta3 = teclado.nextLine().trim().toLowerCase();
         if (resposta3.equals("a")) {
-            System.out.println("Resposta correta! 'Sermão de Santo Antônio aos Peixes' é dele.");
+            System.out.println(ANSI_GREEN+"Resposta correta! 'Sermão de Santo Antônio aos Peixes' é dele."+ANSI_RESET);
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é a) 'Sermão de Santo Antônio aos Peixes'.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A correta é a) 'Sermão de Santo Antônio aos Peixes'."+ANSI_RESET);
         }
         System.out.println();
 
@@ -96,28 +103,28 @@ public class Barroco extends EscolasLiterarias {
 
         switch (pontos) {
             case 3:
-                System.out.println("\nParabéns! Você ganhou a Medalha de Ouro");
-                System.out.println("  *********************");
-                System.out.println("  *     CAMPEÃO(A)     *");
-                System.out.println("  *********************");
-                System.out.println("     \\o/    ");
-                System.out.println("      |     ");
-                System.out.println("     / \\   ");
+                System.out.println(ANSI_YELLOW+"\nParabéns! Você ganhou a Medalha de Ouro"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"  *********************"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"  *     CAMPEÃO(A)     *"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"  *********************"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"     \\o/    "+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"      |     "+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"     / \\   "+ANSI_RESET);
                 break;
 
             case 2:
-                System.out.println("\nParabéns! Você ganhou a Medalha de Prata");
-                System.out.println("  ********************  ");
-                System.out.println("  ***   FOI QUASE LÁ!   ***");
-                System.out.println("  ********************  ");
+                System.out.println(ANSI_CYAN+"\nParabéns! Você ganhou a Medalha de Prata"+ ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ********************  "+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ***   FOI QUASE LÁ!   ***"+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ********************  "+ANSI_RESET);
 
                 break;
 
             case 1:
-                System.out.println("\nParábens! Você ganhou a Medalha de Bronze");
-                System.out.println("  +++++++++++++++++");
-                System.out.println("  +++++++++++++++++");
-                System.out.println("  +     BOM       +");
+                System.out.println(ANSI_ORANGE+"\nParábens! Você ganhou a Medalha de Bronze"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +++++++++++++++++"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +++++++++++++++++"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +     BOM       +"+ANSI_RESET);
                 break;
 
             default:

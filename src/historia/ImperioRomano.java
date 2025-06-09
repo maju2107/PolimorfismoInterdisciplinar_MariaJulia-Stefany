@@ -8,7 +8,13 @@ public class ImperioRomano extends CivilizacoesAntigas {
     private String CriseDoImperioRomano;
     private String Economia ;
     private String ContribuicoesDeixadas;
-    
+
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_ORANGE = "\u001B[38;5;208m";
 
     public ImperioRomano(){
         this.CriseDoImperioRomano = "A primeira manifestação dessa crise deu-se na economia, que demonstrou sinais de enfraquecimento.\nIsso porque, ao longo do período imperial, a dependência da economia romana, sobretudo na porção ocidental do império, do trabalho dos escravos tornou-se excessiva.\nPara agravar a situação, a corrupção e a disputa pelo poder em Roma contribuiram para desestabilizar o império, que estava no caminho do desmoronamento.\nO fator que teve peso decisivo no fim dele foram as invasões germânicas, que começaram a acontecer em larga escala a partir do século III d.C.";
@@ -43,10 +49,10 @@ public class ImperioRomano extends CivilizacoesAntigas {
         System.out.print("Resposta: ");
         String resposta1 = teclado.nextLine().trim().toLowerCase();
         if (resposta1.equals("c")) {
-            System.out.println("Resposta correta! Uma das bases da economia do Império Romano era o trabalho dos camponeses e dos escravos.");
+            System.out.println(ANSI_GREEN+"Resposta correta! Uma das bases da economia do Império Romano era o trabalho dos camponeses e dos escravos."+ANSI_RESET);
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é c) Trabalho dos camponeses e dos escravos.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A correta é c) Trabalho dos camponeses e dos escravos."+ANSI_RESET);
         }
         System.out.println();
 
@@ -58,10 +64,10 @@ public class ImperioRomano extends CivilizacoesAntigas {
         System.out.print("Resposta: ");
         String resposta2 = teclado.nextLine().trim().toLowerCase();
         if (resposta2.equals("a")) {
-            System.out.println("Resposta correta! A primeira manifestação da crise deu-se na economia.");
+            System.out.println(ANSI_GREEN+"Resposta correta! A primeira manifestação da crise deu-se na economia."+ANSI_RESET);
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é a) A Na economia.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A correta é a) A Na economia."+ANSI_RESET);
         }
         System.out.println();
 
@@ -73,10 +79,10 @@ public class ImperioRomano extends CivilizacoesAntigas {
         System.out.print("Resposta: ");
         String resposta3 = teclado.nextLine().trim().toLowerCase();
         if (resposta3.equals("c")) {
-            System.out.println("Resposta correta! O último imperador de Roma foi Rômulo Augusto.");
+            System.out.println(ANSI_GREEN+"Resposta correta! O último imperador de Roma foi Rômulo Augusto."+ANSI_RESET);
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é c) O último imperador de Roma foi Rômulo Augusto..");
+            System.out.println(ANSI_RED+"Resposta incorreta! A correta é c) O último imperador de Roma foi Rômulo Augusto.."+ANSI_RESET);
         }
         System.out.println();
 

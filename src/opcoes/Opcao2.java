@@ -26,13 +26,13 @@ public class Opcao2 {
             vegetal.setNome("Sistema Vegetal");
 
 
-            System.out.println(ANSI_GREEN +"Você escolheu estudar o " + vegetal.getNome() + "!" + ANSI_RESET);
+            System.out.println(ANSI_BLUE +"Você escolheu estudar o " + vegetal.getNome() + "!" + ANSI_RESET);
             espaco();
-            System.out.println(ANSI_GREEN +"Esse sistema é do tipo: " + vegetal.tipo() + ANSI_RESET);
+            System.out.println(ANSI_BLUE +"Esse sistema é do tipo: " + vegetal.tipo() + ANSI_RESET);
             espaco();
-            System.out.println(ANSI_GREEN +"Digite o nome de um ser vivo que possui este tipo de sistema:"+ ANSI_RESET);
+            System.out.println(ANSI_BLUE +"Digite o nome de um ser vivo que possui este tipo de sistema:"+ ANSI_RESET);
             exemplo = teclado.nextLine();
-            System.out.println("Você deu este exemplo:"+exemplo);
+            System.out.println("Você deu este exemplo: "+exemplo);
 
             System.out.println("Você deseja fazer um quiz para aprofundar e testar seus conhecimentos sobre o Sistema Vegetal?");
             querFazerOquiz = teclado.nextLine().toLowerCase();
@@ -56,7 +56,7 @@ public class Opcao2 {
             espaco();
             System.out.println(ANSI_BLUE +"Digite o nome de um ser vivo que possui este tipo de sistema:"+ ANSI_RESET);
             exemplo = teclado.nextLine();
-            System.out.println("Você deu este exemplo:"+exemplo);
+            System.out.println("Você deu este exemplo: "+exemplo);
 
             System.out.println( "Você deseja fazer um quiz para aprofundar e testar seus conhecimentos sobre o Sistema Animal?");
             querFazerOquiz = teclado.nextLine().toLowerCase();
@@ -74,13 +74,13 @@ public class Opcao2 {
             Sistemas humano = new Humano();
             humano.setNome("Sistema Humano");
 
-            System.out.println(ANSI_RED +"Você escolheu estudar o " + humano.getNome() + "!"+ ANSI_RESET);
+            System.out.println(ANSI_BLUE +"Você escolheu estudar o " + humano.getNome() + "!"+ ANSI_RESET);
             espaco();
-            System.out.println(ANSI_RED +"Esse sistema é do tipo: " + humano.tipo()+ ANSI_RESET);
+            System.out.println(ANSI_BLUE +"Esse sistema é do tipo: " + humano.tipo()+ ANSI_RESET);
             espaco();
-            System.out.println(ANSI_RED +"Digite o nome de um ser vivo que possui este tipo de sistema:"+ ANSI_RESET);
+            System.out.println(ANSI_BLUE +"Digite o nome de um ser vivo que possui este tipo de sistema:"+ ANSI_RESET);
             exemplo = teclado.nextLine();
-            System.out.println("Você deu este exemplo:"+exemplo);
+            System.out.println("Você deu este exemplo: "+exemplo);
 
 
             System.out.println("Você deseja fazer um quiz para aprofundar e testar seus conhecimentos sobre o Sistema Humano?");

@@ -11,6 +11,13 @@ public class PovosPreColombianos extends CivilizacoesAntigas {
     private String PovosInuites;
     private String PovosTupinambas;
 
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_ORANGE = "\u001B[38;5;208m";
+
     public PovosPreColombianos(){
         this.PovosMaias = " Os maias formaram uma grande civilização nas florestas tropicais da América Central,\n com suas principais cidades localizadas na região da Península de Iucatã e atuais Belize e Guatemala.\nOs maias cultivavam milho, tomate, abacate, feijões, abóbora, diversos tipos de pimentas e cacau.\nTambém criavam uma espécie de cachorro para o abate e perus.\nEntre as principais cidades maias, estavam Palenque, Tulum, Chichen Itzá e Tikal,esta última cidade teve, em seu auge, cerca de 50 mil habitantes.\nOs maias também tinham um refinado conhecimento em química, desenvolveram um sistema de escrita,\nelaboraram calendários e, na matemática, foram uma das poucas civilizações a desenvolverem o número zero.";
         this.PovosAstecas = "Os astecas eram povos originários provavelmente da região sul do atual Estados Unidos que migraram para uma ilha no Lago Texcoco,\nno início do século XIV. Essa ilha se tornaria, no século XV, a capital do império asteca, conhecida como Tenochtitlán.\nHoje no local de Tenochtitlán se localiza a Cidade do México, novamente uma das maiores cidades do mundo.";
@@ -49,10 +56,10 @@ public class PovosPreColombianos extends CivilizacoesAntigas {
         System.out.println("e) Inuítes");
             String resposta1 = teclado.nextLine().trim().toLowerCase();
         if (resposta1.equals("d")) {
-            System.out.println("Resposta correta! O povo Asteca vivia na ilha de Tenochtitlán, localizada no lago Texcoco.");
+            System.out.println(ANSI_GREEN+"Resposta correta! O povo Asteca vivia na ilha de Tenochtitlán, localizada no lago Texcoco."+ANSI_RESET);
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é d) Astecas.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A correta é d) Astecas."+ANSI_RESET);
         }
         System.out.println();
 
@@ -64,10 +71,10 @@ public class PovosPreColombianos extends CivilizacoesAntigas {
         System.out.print("Resposta: ");
         String resposta2 = teclado.nextLine().trim().toLowerCase();
         if (resposta2.equals("c")) {
-            System.out.println("Resposta correta! Cristóvão Colombo chegou à América em 12 de outubro de 1492.");
+            System.out.println(ANSI_GREEN+"Resposta correta! Cristóvão Colombo chegou à América em 12 de outubro de 1492."+ANSI_RESET);
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é c) A Em 12 de outubro de 1492.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A correta é c) A Em 12 de outubro de 1492."+ANSI_RESET);
         }
         System.out.println();
 
@@ -79,10 +86,10 @@ public class PovosPreColombianos extends CivilizacoesAntigas {
         System.out.print("Resposta: ");
         String resposta3 = teclado.nextLine().trim().toLowerCase();
         if (resposta3.equals("d")) {
-            System.out.println("Resposta correta! O povo Inuíte vive há mais de 10 mil anos no Ártico.");
+            System.out.println(ANSI_GREEN+"Resposta correta! O povo Inuíte vive há mais de 10 mil anos no Ártico."+ANSI_RESET);
             pontos++;
         } else {
-            System.out.println("Resposta incorreta! A correta é d) O povo Inuíte foi exterminado há 10 mil anos atrás.");
+            System.out.println(ANSI_RED+"Resposta incorreta! A correta é d) O povo Inuíte foi exterminado há 10 mil anos atrás."+ANSI_RESET);
         }
         System.out.println();
         
@@ -100,28 +107,28 @@ public class PovosPreColombianos extends CivilizacoesAntigas {
 
         switch (pontos) {
             case 3:
-                System.out.println("\nParabéns! Você ganhou a Medalha de Ouro");
-                System.out.println("  *********************");
-                System.out.println("  *     CAMPEÃO(A)     *");
-                System.out.println("  *********************");
-                System.out.println("     \\o/    ");
-                System.out.println("      |     ");
-                System.out.println("     / \\   ");
+                System.out.println(ANSI_YELLOW+"\nParabéns! Você ganhou a Medalha de Ouro"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"  *********************"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"  *     CAMPEÃO(A)     *"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"  *********************"+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"     \\o/    "+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"      |     "+ANSI_RESET);
+                System.out.println(ANSI_YELLOW+"     / \\   "+ANSI_RESET);
                 break;
 
             case 2:
-                System.out.println("\nParabéns! Você ganhou a Medalha de Prata");
-                System.out.println("  ********************  ");
-                System.out.println("  ***   FOI QUASE LÁ!   ***");
-                System.out.println("  ********************  ");
+                System.out.println(ANSI_CYAN+"\nParabéns! Você ganhou a Medalha de Prata"+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ********************  "+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ***   FOI QUASE LÁ!   ***"+ANSI_RESET);
+                System.out.println(ANSI_CYAN+"  ********************  "+ANSI_RESET);
 
                 break;
 
             case 1:
-                System.out.println("\nBoa, parabéns! Você ganhou a Medalha de Bronze");
-                System.out.println("  +++++++++++++++++");
-                System.out.println("  +++++++++++++++++");
-                System.out.println("  +     BOM       +");
+                System.out.println(ANSI_ORANGE+"\nBoa, parabéns! Você ganhou a Medalha de Bronze"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +++++++++++++++++"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +++++++++++++++++"+ANSI_RESET);
+                System.out.println(ANSI_ORANGE+"  +     BOM       +"+ANSI_RESET);
                 break;
 
             default:
